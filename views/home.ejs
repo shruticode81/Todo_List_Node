@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css"
+    </head>
+    <body>
+        <div id="main-div">
+            <div id="sets">
+                <div class="shift"><h1 id="page-heading">TODO LIST</h1></div> 
+                <div class="shift" id="toggle">
+                    <div id="circle" class="animate"></div>
+                </div>
+            </div>
+            
+            <hr>
+            <form action="/create-todo" method="POST">
+                <div id="descrip-tion">
+                    <label class="heading" for="description">DESCRIPTION</label><br>
+                    <input type="text" id="description" name="description" placeholder="What do you need to do"  >
+                </div>
+                <br>
+                <!-- <hr> -->
+                <div id="outer-div">
+                    <div class="inner-div" id="cat-margin"> 
+                        <label class="heading" for="category" >CATEGORY</label><br>
+                        <!-- <input type="text" id="category" name="category"placeholder="choose a category"> -->
+                        <select name="category" id="options" required >
+                            <option disabled selected>Choose a Category</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="others">Others</option>
+        
+                        </select>
+                    </div>
+                    <div id="due-date"  class="inner-div">
+                        <label class="heading" for="dates">DUE DATE</label><br>
+                        <input id="dates" type="date" name="date">
+                    </div>
+                </div><br>
+                <div id="container">
+                    <div id="add-task" class="common">
+                        <button type="submit">
+                            <i class="fas fa-plus"></i>
+                            ADD TASK
+                        </button>
+                    </div>
+
+                    <div id="delete-task" class="common">
+                        <button form="delete-form"  type="submit">
+                            <i class="fas fa-trash-alt"></i>
+                            DELETE TASK
+                        </button>
+                    </div>
+                </div>
+                    
+                    
+            </form>
+            <!-- <hr> -->
+            <form id="delete-form" action="/delete-todo" method="POST">
+                
+                <div>
+                    
+                    <ul>
+                        <hr>
+                        <% for(let i of todo_list) {%>
+                            <!-- <hr> -->
+                            <li>
+                                <div id="aside">
+                                    <div id="checkbox-des">
+                                        <input class="check-box" type="checkbox" name="<%=i._id %>" value="<%=i._id%>">
+                                        <span style="color: gray;font-size: larger;font-weight: 700;">&nbsp&nbsp<%= i.description %></span>
+                                        <p style="margin-left: 18px; color: gray;font-size: large;font-weight: bold;">&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-calendar-alt"></i>&nbsp&nbsp<%= i.due_date%></p>
+                                    </div>
+                                    <div id="side-catergory">
+                                        <p><%= i.category %></p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </li>
+                            <hr>
+                        <%}%>
+                    </ul>
+                </div>
+            </form>
+            <!-- <hr> -->
+        </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>

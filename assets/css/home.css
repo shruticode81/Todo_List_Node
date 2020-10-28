@@ -1,0 +1,267 @@
+ul{
+    list-style-type:none;
+}
+body{
+    margin: 0;
+    overflow: auto;
+}
+/* styling toggle */
+#toggle {
+    background-color: white;
+    width: 70px;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    /* margin: 50px auto; */
+    margin-left: 420px;
+    cursor: pointer;
+}
+
+#circle {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: 1px;
+    transition-duration: 1s;
+    margin-left: 1px;
+}
+.bck-color-white {
+    background-color: black;
+}
+/* #sets{
+    display: flex;
+    justify-content: space-around;
+} */
+#main-div .shift{
+    display: inline-block;
+    /* margin: 30px; */
+}
+hr{
+    box-shadow:  0px 0px  2px 1px gray;
+}
+/* styling outer border */
+#main-div{
+    height: 90%;
+    overflow-y: scroll;
+    width: 48%;
+    margin: 355px;
+    margin-top: 30px;
+    border: 2px solid grey;
+    /* background-color: black; */
+}
+#main-div:hover{
+    box-shadow:  0px 0px  4px 4px gray;
+}
+#page-heading{
+    text-align: center;
+    /* margin: auto; */
+    /* margin-left: 50px; */
+    margin-top: 25px;
+    color: grey;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+/* heading of todo */
+.heading{
+    color: gray;
+    margin-left: 20px;
+    font-size: larger;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+#cat-margin{
+    margin-left: 10px;
+}
+
+/* description styling */
+#descrip-tion input{
+    background-color: blanchedalmond;
+    border: 0px solid;
+    height:60px;
+    width: 97%;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+input[type="text"]{
+    border: none;
+    padding-left: 20px;
+    font-size: larger;
+    color: grey;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+input[type="text"]:focus{
+                    outline: none;
+                }
+
+/* styling category and date selection */
+#outer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px black; */
+}
+.inner-div{
+    /* width: 46%; */
+    width: 415px;
+    height: 100px;
+    /* border: 1px solid; */
+    padding-top: 5px;
+    box-shadow: 0px 0px 4px 2px gray;
+}
+#options{
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 92%;
+    height: 50px;
+    border: none;
+    font-weight: 540;
+}
+option{
+    color: grey;
+    font-size: larger;
+    background-color: blanchedalmond;
+} 
+option:hover{
+    background-color: gray;
+}
+select{
+    background-color: lightsalmon;
+    color: gray;
+    font-size: larger;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+/* todo add box-shadow */
+/* #cat-margin:hover{
+    box-shadow: 0px opx 4px 6px rgba(230,196,196,0.3);
+} */
+#cat-margin{
+    box-shadow: 0px opx 4px 6px rgba(230,196,196,0.3);
+}
+
+select:focus{
+    outline: none;
+    color: grey;
+   
+}
+/* styling of due date */
+#due-date{
+    margin-right: 10px;
+}
+#due-date input{
+    background-color: lightsalmon;
+    border: 0px solid;
+    margin-top: 10px;
+    margin-left: 15px;
+    padding-left: 50px;
+    /* font-size: larger; */
+}
+
+/* #date {
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: hidden;
+    background-color: transparent;
+}
+.no-outline:focus {
+    outline: none;
+} */
+/* styling date input box */
+input[type="date"]{
+    border: none;
+    color: grey;
+    /* font-size: 900px; */
+    font-weight: bolder;
+    
+}
+input[type="date"]:focus{
+                    outline: none;
+}
+#dates{
+    font-size:1.4rem;
+    height:50px;
+    width: 83%;
+}
+/* adding styles to add-task button */
+.common{
+    /* border: 1px black; */
+    width: 500px;
+}
+button[type="submit"]{
+    width:200px;
+    height: 60px;
+    /* margin-left: 160px; */
+}
+
+/* styling add-task button */
+#add-task button{
+    margin-left: 165px;
+    background-color: crimson;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: larger;
+}
+/* styling delete-task button */
+#delete-task button{
+    margin-left : 6px;
+    background-color: blue;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: larger;
+}
+#container{
+    display: flex;
+}
+/* styling last section */
+#aside{
+    display: flex;
+    justify-content: space-between;
+}
+#checkbox-des{
+    width: 60%;
+    height: 65px;
+    /* border: 2px solid; */
+
+}
+#side-catergory{
+    width: 15%;
+    /* max-width: max-content; */
+    height: 45px;
+    border: 1px solid;
+    margin-right: 6px;
+    margin-top: 6px ;
+    border-radius: 3px;
+    background-color:purple;
+    padding-left: 5px;
+    padding-right: 2px;
+    /* padding: 3px 7px 9px 2px; */
+    /* padding-right:; */
+    /* padding-bottom: 5px; */
+}
+#side-catergory p{
+    /* padding-left: 20px; */
+    padding: 0px 18px 8px;
+    /* padding-bottom: 5px;   */
+    
+    /* padding-right: 20px; */
+    color: whitesmoke;
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+/* styling checkbox not working pls check */
+/* actually im also not try before like that you can google it out when i googled it showed sme we cn dd property but i my case im unable to add */
+.check-box[type="checkbox"]{
+    font-size: 35px;
+    border: 2px solid gray;
+    width:16px;
+    height:16px;
+}
+/* .check-box[type="checkbox"]:hover{
+    background-color: grey;
+
+} */
